@@ -18,6 +18,7 @@
  * 3. This notice may not be removed or altered from any source distribution.
  **/
 
+
 package org.love2d.android;
 
 import org.libsdl.app.SDLActivity;
