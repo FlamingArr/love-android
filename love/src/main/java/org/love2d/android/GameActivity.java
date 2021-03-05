@@ -241,11 +241,8 @@ public class GameActivity extends SDLActivity {
         // If no game.love was found and embed flavor is not used, fall back to the game in
         // <external storage>/Android/data/<package name>/games/lovegame
         if (!embed) {
-            // if (android.os.Build.VERSION.SDK_INT <= 28) {
-                // Try to fallback to /sdcard/lovegame in Android 9 and earlier too.
-                if (hasExternalStoragePermission()) {
-                    ext = Environment.getExternalStorageDirectory();
-                    if ((new File(ext, "/lovegame/main.lua")).exists()) {
+            if (hasExternalStoragePermission()) {
+                ((new File(ext, "/lovegame/main.lua")).exists()) {
                         gamePath = ext.getPath() + "/lovegame/";
                         storagePermissionUnnecessary = false;
                     }
