@@ -242,14 +242,13 @@ public class GameActivity extends SDLActivity {
         // <external storage>/Android/data/<package name>/games/lovegame
         if (!embed) {
             if (hasExternalStoragePermission()) {
-                ((new File(ext, "/lovegame/main.lua")).exists()) {
-                        gamePath = ext.getPath() + "/lovegame/";
+                ((new File("/sdcard/lovegame/main.lua")).exists()) {
+                        gamePath = "/sdcard/lovegame/";
                         storagePermissionUnnecessary = false;
                     }
                 } else {
                     Log.d("GameActivity", "Cannot load game from /sdcard/lovegame: permission not granted");
                 }
-           // }
 
             Log.d("GameActivity", "lovegame directory: " + gamePath);
         }
