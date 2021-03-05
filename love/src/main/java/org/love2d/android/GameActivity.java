@@ -242,7 +242,7 @@ public class GameActivity extends SDLActivity {
         // <external storage>/Android/data/<package name>/games/lovegame
         if (!embed) {
             if (hasExternalStoragePermission()) {
-                ((new File("/sdcard/lovegame/main.lua")).exists()) {
+                if (new File("/sdcard/lovegame/main.lua")).exists()) {
                         gamePath = "/sdcard/lovegame/";
                         storagePermissionUnnecessary = false;
                     }
