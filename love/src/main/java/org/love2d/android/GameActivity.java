@@ -243,12 +243,12 @@ public class GameActivity extends SDLActivity {
         if (!embed) {
             if (hasExternalStoragePermission()) {
                 if ((new File("/sdcard/lovegame/main.lua")).exists()) {
-                        gamePath = "/sdcard/lovegame/";
-                        storagePermissionUnnecessary = false;
-                    }
-            } else {
-                    Log.d("GameActivity", "Cannot load game from /sdcard/lovegame: permission not granted");
+                    gamePath = "/sdcard/lovegame/";
+                    storagePermissionUnnecessary = false;
                 }
+            } else {
+                Log.d("GameActivity", "Cannot load game from /sdcard/lovegame: permission not granted");
+            }
 
             Log.d("GameActivity", "lovegame directory: " + gamePath);
         }
